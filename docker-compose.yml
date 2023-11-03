@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    container_name: projetoSpring
+    environment:
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - projetoSpring_data:/var/lib/postgres
+
+volumes:
+  projetoSpring_data:
